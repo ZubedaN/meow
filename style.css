@@ -1,0 +1,88 @@
+:root {
+    --primary-pink: #FF69B4;
+    --secondary-pink: #FFB6C1;
+    --accent-pink: #FF1493;
+    --soft-pink: #FFF0F5;
+    --deep-pink: #DC143C;
+    --gold: #FFD700;
+    --white: #FFFFFF;
+    --light-gray: #F8F9FA;
+    --shadow: rgba(255, 105, 180, 0.2);
+    
+    /* Beautiful Elegant Fonts */
+    --font-heading: 'Great Vibes', cursive;
+    --font-elegant: 'Cormorant Garamond', serif;
+    --font-special: 'Alex Brush', cursive;
+    --font-body: 'Poppins', sans-serif;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #FF69B4, #FF1493, #DC143C);
+    --gradient-soft: linear-gradient(135deg, #FFB6C1, #FFF0F5, #FF69B4);
+    --gradient-gold: linear-gradient(135deg, #FFD700, #FFA500);
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background: var(--gradient-soft);
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    position: relative;
+}
+
+/* Floating Hearts Background */
+.hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.heart {
+    position: absolute;
+    color: var(--primary-pink);
+    font-size: 20px;
+    animation: float 6s infinite ease-in-out;
+    opacity: 0.7;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
+    50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
+}
+
+/* Music Control */
+.music-control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.music-btn {
+    background: var(--gradient-primary);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px var(--shadow);
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.music-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px var(--shadow);
+}
