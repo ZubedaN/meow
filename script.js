@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
     function createHearts() {
         const heartsContainer = document.querySelector('.hearts-container');
         const heartSymbols = ['💕', '💖', '💗', '💘', '💝', '💞', '💟', '💌', '💋', '❤️'];
@@ -36,3 +37,4 @@
     });
 
       createHearts();
+});
